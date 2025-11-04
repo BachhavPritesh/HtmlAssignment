@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Canva: Visual Suite For Everyone</title>
+    <link rel="stylesheet" href="canva.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="#" class="logo" aria-label="Home"><img src="https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg" alt=""></a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#" class="nav-link">Design</a>
+          <a href="#" class="nav-link">Product</a>
+          <a href="#" class="nav-link">Plans</a>
+          <a href="#" class="nav-link">Business</a>
+          <a href="#" class="nav-link">Education</a>
+          <a href="#" class="nav-link">Help</a>
+        </nav>
+        <div class="auth">
+          <button class="btn btn-ghost">Sign up</button>
+          <button class="btn btn-primary btn-small">Log in</button>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <nav class="mobile-nav" aria-label="Mobile">
+          <a href="#" class="mobile-link">Design</a>
+          <a href="#" class="mobile-link">Product</a>
+          <a href="#" class="mobile-link">Plans</a>
+          <a href="#" class="mobile-link">Business</a>
+          <a href="#" class="mobile-link">Education</a>
+          <a href="#" class="mobile-link">Help</a>
+          <div class="mobile-auth">
+            <button class="btn btn-ghost">Sign up</button>
+            <button class="btn btn-primary btn-small">Log in</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 class="hero-title">Where heart meets art</h1>
+            <p class="hero-subtitle">Canva makes it easy to create and share professional designs.</p>
+            <div class="hero-ctas">
+              <button class="btn btn-light">Sign up and start designing</button>
+            </div>
+          </div>
+
+          <div class="hero-media " role="img" aria-label="People collaborating in an office with design on screen">
+            <video autoplay muted loop src="https://content-management-files.canva.com/b4a76710-252f-448a-aae2-419a465d0491/CanvaIndia_Brandfilm_Downedit_Farewell_3.5mins_16x9-compressed-resize.mp4"></video>
+        </div>
+      </section>
+
+      <section class="explore">
+        <div class="container">
+          <h2 class="section-title">Explore Canva's Templates and AI Tools</h2>
+          <div class="chip-row" role="list">
+            <button class="chip is-active" role="listitem">Try it now</button>
+            <button class="chip" role="listitem">AI</button>
+            <button class="chip" role="listitem">Presentation</button>
+            <button class="chip" role="listitem">Social Media</button>
+            <button class="chip" role="listitem">Print</button>
+            <button class="chip" role="listitem">Video</button>
+            <button class="chip" role="listitem">Education</button>
+          </div>
+        </div>
+      </section>
+
+     
+      <section class="features">
+        <div class="container">
+          <div class="feature-grid">
+            <article class="tile tile-pink">
+              <video  autoplay muted loop src="https://content-management-files.canva.com/fbd599e2-8bae-40e1-91a0-628a9182c09d/Recommended_DreamLab_Desktop2.mp4"></video>
+              <h3 class="tile-title">Watch your words turn into production‑quality visuals with AI</h3>
+              <button class="btn btn-light tile-btn">Generate media</button>
+            </article>
+
+            <article class="tile tile-sand">
+              
+              <h3 class="tile-title">Bye‑bye background, in a single click</h3>
+              <button class="btn btn-light tile-btn">Remove background</button>
+            </article>
+
+            <article class="tile tile-magenta">
+              <h3 class="tile-title">Design, present & inspire with presentations</h3>
+              <button class="btn btn-light tile-btn">Create a presentation</button>
+            </article>
+
+            <article class="tile tile-indigo">
+              <h3 class="tile-title">Create scroll‑stopping social media content for any platform</h3>
+              <button class="btn btn-light tile-btn">Design for social media</button>
+            </article>
+
+            <article class="tile tile-teal tile-wide">
+              <h3 class="tile-title">Make your videos look awesome on any screen</h3>
+              <button class="btn btn-light tile-btn">Edit a video</button>
+            </article>
+
+            <article class="tile tile-orange">
+              <h3 class="tile-title">Make easy edits with an AI‑powered editor</h3>
+              <button class="btn btn-light tile-btn">Edit an image</button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="generator">
+        <div class="container generator-grid">
+          <div class="gen-copy">
+            <h2 class="gen-title">Try Image Generator</h2>
+            <p class="gen-subtitle">Turn pure text to art with Magic Media™ and our range of AI art generator tools. Simply enter a prompt, pick a style, and watch your words transform into beautiful art.</p>
+            <form class="gen-form" onsubmit="event.preventDefault()">
+              <div class="input-wrap">
+                <span class="input-icon" aria-hidden="true">✨</span>
+                <input aria-label="Prompt" type="text" placeholder="Moon rising over the mountains" />
+                <button class="clear" type="button" aria-label="Clear">✕</button>
+              </div>
+              <button class="btn btn-primary gen-btn" type="submit">Generate</button>
+            </form>
+          </div>
+          <div class="gen-media">
+            <div class="gen-card" role="img" aria-label="Vibrant moon over mountains"></div>
+            <div class="style-tray">
+              <button class="style-chip is-active">
+                <span class="thumb"></span>
+                <span>Dreamy</span>
+              </button>
+              <button class="style-chip">
+                <span class="thumb"></span>
+                <span>Anime</span>
+              </button>
+              <button class="style-chip">
+                <span class="thumb"></span>
+                <span>Watercolor</span>
+              </button>
+              <button class="style-chip">
+                <span class="thumb"></span>
+                <span>Filmic</span>
+              </button>
+              <button class="style-chip more">20+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  
+      <section class="business">
+        <div class="container">
+          <h2 class="section-title">Our Business Features</h2>
+          <p class="biz-sub">Enhance the design capabilities of your team or your entire business with Canva's business plans.</p>
+        </div>
+        <div class="biz-track" aria-label="Business features" role="region">
+          <article class="biz-card biz-mint c1">
+            <h3 class="biz-title">Set up a Brand Kit to unify your designs</h3>
+            <button class="btn btn-light">Learn more</button>
+          </article>
+          <article class="biz-card biz-mint c2 ">
+            <h3 class="biz-title">Empower your team to scale content</h3>
+            <button class="btn btn-light">Learn more</button>
+          </article>
+          <article class="biz-card biz-mint c3 ">
+            <h3 class="biz-title">Collaborate & create in real time</h3>
+            <button class="btn btn-light">View plans</button>
+          </article>
+          <article class="biz-card biz-mint c4 ">
+            <h3 class="biz-title">Control permissions and approvals</h3>
+            <button class="btn btn-light">Learn more</button>
+          </article>
+          <article class="biz-card biz-mint c5">
+            <h3 class="biz-title">Centralize assets with Brand Hub</h3>
+            <button class="btn btn-light">Learn more</button>
+          </article>
+        </div>
+      </section>
+
+     
+      <section class="plans-cta">
+        <div class="container plans-inner">
+          <p class="plans-note">Unlock premium templates, more powerful design tools & AI features with a Canva plan. Educational institutions and non‑profits can use Canva's premium features for free.</p>
+          <button class="btn btn-light plans-btn">See plans and pricing</button>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-brand">
+            <a class="logo" href="#" aria-label="Home">Canva</a>
+            <p class="download-title">Download Canva for free</p>
+            <div class="download-row">
+              <button class="btn btn-light btn-small">Windows</button>
+              <button class="btn btn-light btn-small">Mac</button>
+            </div>
+          </div>
+
+          <nav class="footer-col" aria-label="Product">
+            <h4 class="footer-head">Product</h4>
+            <a href="#" class="footer-link">Latest launches</a>
+            <a href="#" class="footer-link">Visual Suite</a>
+            <a href="#" class="footer-link">Magic Studio</a>
+            <a href="#" class="footer-link">Brand management</a>
+            <a href="#" class="footer-link">Social media</a>
+            <a href="#" class="footer-link">Features</a>
+            <a href="#" class="footer-link">Print</a>
+            <a href="#" class="footer-link">Apps Marketplace</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Plans">
+            <h4 class="footer-head">Plans</h4>
+            <a href="#" class="footer-link">Pricing</a>
+            <a href="#" class="footer-link">Pro</a>
+            <a href="#" class="footer-link">Business</a>
+            <a href="#" class="footer-link">Enterprise</a>
+            <a href="#" class="footer-link">Education</a>
+            <a href="#" class="footer-link">Higher education</a>
+            <a href="#" class="footer-link">Nonprofits</a>
+            <a href="#" class="footer-link">Contact Sales</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Help">
+            <h4 class="footer-head">Help</h4>
+            <a href="#" class="footer-link">Help Centre</a>
+            <a href="#" class="footer-link">Security</a>
+            <a href="#" class="footer-link">Trust Centre</a>
+            <a href="#" class="footer-link">Canva Safe AI</a>
+            <a href="#" class="footer-link">Accessibility</a>
+            <a href="#" class="footer-link">Enterprise services</a>
+            <a href="#" class="footer-link">Design School</a>
+            <a href="#" class="footer-link">Sitemap</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="About">
+            <h4 class="footer-head">About</h4>
+            <a href="#" class="footer-link">About Canva</a>
+            <a href="#" class="footer-link">Newsroom</a>
+            <a href="#" class="footer-link">Events</a>
+            <a href="#" class="footer-link">Careers</a>
+            <a href="#" class="footer-link">Social impact</a>
+            <a href="#" class="footer-link">Sustainability</a>
+            <a href="#" class="footer-link">Case Studies</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Inspiration">
+            <h4 class="footer-head">Inspiration</h4>
+            <a href="#" class="footer-link">Design Trends</a>
+            <a href="#" class="footer-link">Work Kits</a>
+            <a href="#" class="footer-link">AI creativity podcast</a>
+            <a href="#" class="footer-link">Learn blog</a>
+            <a href="#" class="footer-link">Template library</a>
+            <a href="#" class="footer-link">Font pairing</a>
+            <a href="#" class="footer-link">Colour palette generator</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Tools">
+            <h4 class="footer-head">Tools</h4>
+            <a href="#" class="footer-link">QR code generator</a>
+            <a href="#" class="footer-link">AI logo generator</a>
+            <a href="#" class="footer-link">Signature generator</a>
+            <a href="#" class="footer-link">Business name generator</a>
+            <a href="#" class="footer-link">PDF converter</a>
+            <a href="#" class="footer-link">PDF to JPG converter</a>
+            <a href="#" class="footer-link">JPG to PDF converter</a>
+          </nav>
+
+          <nav class="footer-col" aria-label="Community">
+            <h4 class="footer-head">Community</h4>
+            <a href="#" class="footer-link">Canva Communities</a>
+            <a href="#" class="footer-link">Creators</a>
+            <a href="#" class="footer-link">Affiliates</a>
+            <a href="#" class="footer-link">Canva Represents Fund</a>
+            <a href="#" class="footer-link">Content partners</a>
+            <a href="#" class="footer-link">Business partner directory</a>
+            <a href="#" class="footer-link">Canva Developers</a>
+          </nav>
+        </div>
+
+        <div class="container footer-bottom">
+          <div class="locale">English (India)</div>
+          <div class="social">
+            <a class="social-btn" href="#" aria-label="LinkedIn">in</a>
+            <a class="social-btn" href="#" aria-label="Instagram">IG</a>
+            <a class="social-btn" href="#" aria-label="Facebook">f</a>
+            <a class="social-btn" href="#" aria-label="TikTok">t</a>
+            <a class="social-btn" href="#" aria-label="YouTube">▶</a>
+          </div>
+          <div class="legal">Privacy · Terms · © 2025 All Rights Reserved</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('mobile-menu');
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        const isHidden = menu.hasAttribute('hidden');
+        if (isHidden) {
+          menu.removeAttribute('hidden');
+        } else {
+          menu.setAttribute('hidden', '');
+        }
+      });
+    </script>
+  </body>
+  </html>
+
+
