@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prime — Kiwi Berry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="prime.css" />
+  <link rel="stylesheet" href="@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left">
+        <a href="#" class="nav-link">Shop</a>
+        <a href="#" class="nav-link">About Prime</a>
+        <a href="#" class="nav-link">Where to Buy</a>
+        <a href="#" class="nav-link">Verify</a>
+        <a href="#" class="nav-link">Our Prime</a>
+      </div>
+
+      <a href="#" class="brand">PRIME</a>
+
+      <div class="nav-right">
+        <div class="locale">
+          <button class="chip chip-active">US</button>
+          <button class="chip">UK</button>
+        </div>
+        <button class="icon-btn" aria-label="Search" title="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2" />
+            <path d="M20 20L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </button>
+        <a href="#" class="buy-btn">Buy Prime</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-inner">
+      <div class="copy">
+        <p class="eyebrow">QuikTrip Exclusive</p>
+        <h1 class="title">Kiwi Berry</h1>
+        <a href="#" class="cta">Find in stores</a>
+      </div>
+
+      <!-- Decorative bottle-style display -->
+      <div class="bottle">
+        <span class="flavor">Kiwi<br/>Berry</span>
+        <span class="word">PRIME</span>
+      </div>
+
+      <!-- Floating bubbles for depth -->
+      <div class="bubbles" aria-hidden="true">
+        <!-- These empty spans are positioned via CSS to create floating bubbles -->
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </main>
+  
+  <section class="catalog" id="hydration">
+    <div class="catalog-inner">
+      <h2 class="catalog-title">HYDRATION</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/SamsClubVP_Web_PDP_Front_2000x2000_ce80d06e-1ca0-4132-8e64-931ccedfea60_200x.png?v=1762529741" alt="Variety Pack" />
+          <h3 class="product-name">Orange Swirl, Future Freeze, Berry Freeze Variety Pack</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/KiwiBerry_Web_DropBanner_PDP_Front_2000x2000_0385abd4-259d-4371-a90f-7c73e9975ed8_200x.png?v=1762270814" alt="Kiwi Berry" />
+          <h3 class="product-name">Kiwi Berry</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PRIME_Hydration_US_1serve_16.9oz_Niagara_KSI_Nightmare_0000_1_10239ca5-2c36-4586-8c44-f23d0d824553_200x.png?v=1755007066" alt="KSI The Nightmare" />
+          <h3 class="product-name">KSI The Nightmare</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/OrangeKream_Web_DropBanner_PDP_Front_2000x2000_8b5dd6e8-169d-4332-84ef-e4028707c470_200x.png?v=1752250151" alt="Orange Kream" />
+          <h3 class="product-name">Orange Kream</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PRIME_hydration_1serve_16.9oz_US_CollectorSeries_00000_200x.png?v=1748550723" alt="Prime Collector Series" />
+          <h3 class="product-name">Prime Collector Series</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/Sournova_Web_DropBanner_PDP_Front_2000x2000_ffba587e-02f2-491a-a375-5f5b3e7f2eb8_200x.png?v=1744126206" alt="Sournova" />
+          <h3 class="product-name">Sournova</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Shop tiles -->
+  <section class="shop-tiles" id="shop">
+    <div class="shop-tiles-inner">
+      <article class="tile">
+        <img src="https://drinkprime.com/cdn/shop/files/PR_KSINightmare_Group_Image_600x.jpg?v=1755006176" alt="Hydration Bottles" />
+        <a href="#" class="tile-btn">Shop Hydration</a>
+      </article>
+      <article class="tile">
+        <img src="https://drinkprime.com/cdn/shop/files/SB_Sticks_Group_Image_62d7f23f-1f41-41e6-b684-dcea0a99466d_600x.jpg?v=1735834764" alt="Hydration+ Sticks" />
+        <a href="#" class="tile-btn">Shop Hydration+</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ENERGY grid -->
+  <section class="catalog" id="energy">
+    <div class="catalog-inner">
+      <h2 class="catalog-title">ENERGY</h2>
+      <div class="product-grid">
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PE_US_16oz_PesoPluma_0000_400x.png?v=1758316841" alt="Peso Pluma" />
+          <h3 class="product-name">Peso Pluma</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/CherryLimeade-Front_400x.png?v=1738165075" alt="Cherry Limeade" />
+          <h3 class="product-name">Cherry Limeade</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PRIME_energy_1serve_16oz_US_Drpsicle_00000_400x.png?v=1738164974" alt="Dripsicle" />
+          <h3 class="product-name">Dripsicle</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PE-Dream_V2_2000x.png?v=1738170814" alt="Dream Pop" />
+          <h3 class="product-name">Dream Pop</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+        <article class="product-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PE-Original_V2_400x.png?v=1738170791" alt="Original" />
+          <h3 class="product-name">Original</h3>
+          <a class="product-btn" href="#">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="energy-promo">
+    <div class="energy-promo-inner">
+      <div class="energy-visual">
+        <img src="https://drinkprime.com/cdn/shop/files/PRIME_group_shot_V3_600x.png?v=1736366419" alt="PRIME Energy Cans" />
+      </div>
+      <div class="energy-details">
+        <img class="energy-facts-img" src="https://drinkprime.com/cdn/shop/files/Updated_PRIME_US_Energy_Grouped_Callout_Image_-_Oct_2023_600x.png?v=1697574309" alt="Energy facts: caffeine, electrolytes, zero sugar, vegan" />
+        <a href="#energy" class="energy-btn">Shop Energy</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="rehydration" id="rehydration">
+    <div class="rehydration-inner">
+      <h2 class="rehydration-title">RAPID<br/>REHYDRATION</h2>
+      <div class="rehydration-grid">
+        <article class="rehydration-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_CBR_Web_PDP_Front_2000x2000_18fe6542-ade6-44fd-a8e5-1ef8b1fc5c84_400x.png?v=1747401390" alt="Berry Citrus Rush" />
+          <h3 class="rehydration-name">Berry Citrus Rush</h3>
+          <a class="rehydration-btn" href="#">Learn More</a>
+        </article>
+        <article class="rehydration-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_GO_Web_PDP_Front_2000x2000_fd03bf87-bb43-4ca6-9767-756907babcd5_400x.png?v=1747400970" alt="Glacier Orange" />
+          <h3 class="rehydration-name">Glacier Orange</h3>
+          <a class="rehydration-btn" href="#">Learn More</a>
+        </article>
+        <article class="rehydration-card">
+          <img src="https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_OC_Web_PDP_Front_2000x2000_a0a85545-b084-4303-86d8-5ced85a845b1_400x.png?v=1747401501" alt="Ocean Cherry" />
+          <h3 class="rehydration-name">Ocean Cherry</h3>
+          <a class="rehydration-btn" href="#">Learn More</a>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+   <section class="energy-promo">
+    <div class="energy-promo-inner">
+      <div class="energy-visual">
+        <img src="https://drinkprime.com/cdn/shop/files/PR_RapidRehydration_Group_Image_600x.jpg?v=1747662336" alt="PRIME Energy Cans" />
+      </div>
+      <div class="energy-details">
+        <img class="energy-facts-img" src="https://drinkprime.com/cdn/shop/files/Product_Callout_Icons_Icons_Group_600x.png?v=1747339467" alt="Energy facts: caffeine, electrolytes, zero sugar, vegan" />
+        <a href="#energy" class="energy-btn">Rehydrate Now</a>
+      </div>
+    </div>
+  </section>
+        
+       <h2 class="Primeice">PRIME ICE</h2>
+   <section class="energy-promo">
+    
+    <div class="energy-promo-inner">
+      <div class="energy-visual">
+        <img src="https://drinkprime.com/cdn/shop/files/PRIME_ICE_-_Grouped_Bottles_V2_400x.png?v=1736355512" alt="PRIME Energy Cans" />
+      </div>
+      <div class="energy-details">
+        <img class="energy-facts-img" src="https://drinkprime.com/cdn/shop/files/PR_ICE_Hydration_Grouped_Callouts_Image_400x.png?v=1735849817" alt="Energy facts: caffeine, electrolytes, zero sugar, vegan" />
+        <a href="#energy" class="energy-btn">Shop Ice Hydration</a>
+      </div>
+    </div>
+  </section>
+  
+ </body>
+ </html>

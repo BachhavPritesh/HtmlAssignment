@@ -1,0 +1,671 @@
+/* Base */
+:root {
+  /* --bg1: #00d0d4;
+  --bg2: #00b0c1; */
+  --ink: #ffffff;
+  --ink-dim: rgba(255, 255, 255, .8);
+  --ink-soft: rgba(255, 255, 255, .65);
+  --chip: #0b2a2c33;
+  --chip-border: #66e3e780;
+  --brand: #000;
+}
+
+
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  height: 100%
+}
+/* Prevent horizontal scroll from tiny rounding/gap overflows */
+html, body { overflow-x: hidden; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+}
+
+/* Header / Nav */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  background: transparent;
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 28px;
+  color: var(--ink);
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px
+}
+
+.nav-right {
+  justify-self: end;
+  margin-left: auto
+}
+
+.nav-left .nav-link,
+.nav-right .nav-link {
+  color: var(--ink-dim);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: .05em;
+  text-transform: uppercase
+}
+
+.nav-left .nav-link:hover,
+.nav-right .nav-link:hover {
+  color: var(--ink)
+}
+
+.brand {
+  justify-self: center;
+  font-weight: 900;
+  letter-spacing: .06em;
+  color: var(--brand);
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  text-decoration: none;
+  font-size: 3rem;
+  line-height: 1;
+   font-family: "Bebas Neue", sans-serif;
+}
+
+.locale {
+  display: flex;
+  gap: 6px
+}
+
+.chip {
+  color: var(--ink);
+  background: var(--chip);
+  border: 1px solid var(--chip-border);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase
+}
+
+.chip-active {
+  background: #ffffff1a;
+  border-color: #fff;
+  color: #fff
+}
+
+.icon-btn {
+  background: transparent;
+  border: 1px solid var(--chip-border);
+  border-radius: 8px;
+  color: var(--ink);
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center
+}
+
+.icon-btn:hover {
+  border-color: #fff
+}
+
+.buy-btn {
+  padding: 10px 16px;
+  border: 1px solid #ffffff66;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase
+}
+
+.buy-btn:hover {
+  background: #ffffff1a
+}
+
+/* Hero */
+.hero {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden
+}
+
+.hero-inner {
+  width: min(1200px, 92vw);
+  margin: auto;
+  position: relative;
+
+}
+
+/* Use a background image instead of a constructed bottle */
+.hero {
+  background-image: url('https://drinkprime.com/cdn/shop/files/KiwiBerry_Web_DropBanner_Desktop_4320x1926_8b86dc95-b795-4b71-9fdc-65e2c471db76_1600x.jpg?v=1762270717');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, .08) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, .04) 100%);
+  pointer-events: none
+}
+
+.copy {
+  max-width: 520px;
+  padding: 80px 0 120px 6px;
+
+
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: var(--ink-soft);
+  margin: 0 0 10px 0;
+  font-weight: 700
+}
+
+.title {
+  font-size: 64px;
+  line-height: .95;
+  margin: 0 0 26px 0;
+  text-transform: uppercase;
+  color: #fff
+}
+
+.cta {
+  display: inline-block;
+  background: #fff;
+  color: #0d3b3e;
+  border-radius: 10px;
+  padding: 14px 22px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .06em
+}
+
+.cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .15)
+}
+
+/* Bottle visual (pure CSS approximation) */
+/* Hide constructed bottle and word when using real background image */
+.bottle,
+.word {
+  display: none
+}
+
+/* Bubbles */
+/* Hide bubbles when using real image */
+.bubbles {
+  display: none
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1)
+  }
+
+  50% {
+    transform: translateY(-30px) scale(1.03)
+  }
+
+  100% {
+    transform: translateY(0) scale(1)
+  }
+}
+
+/* Catalog (HYDRATION) */
+.catalog {
+  background: #fff;
+  color: #111;
+}
+
+.catalog-inner {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 52px 0 80px;
+}
+
+.catalog-title {
+  font-size: clamp(36px, 12vw, 140px);
+  font-weight: 900;
+  letter-spacing: .2em;
+  text-align: center;
+  margin: 0 0 26px 0;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 36px;
+}
+
+.product-card {
+  flex: 1 1 200px;
+  max-width: 220px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 3/5;
+  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, .08));
+}
+
+.product-name {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #111;
+  margin: 14px 0 16px;
+}
+
+.product-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #111;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background: #fff;
+  margin-top: auto;
+}
+
+.product-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .product-grid {
+    flex-wrap: nowrap;
+    gap: 32px 12px;
+  }
+
+  /* Fit 6 cards per row on desktop accounting for 5 horizontal gaps of 12px => 60px total */
+  .product-card {
+    flex: 0 0 calc((100% - 60px)/6);
+    max-width: calc((100% - 60px)/6);
+  }
+}
+
+@media (max-width: 560px) {
+  .catalog-inner {
+    padding: 36px 0 60px;
+  }
+
+  .product-grid {
+    gap: 20px;
+  }
+
+  .product-card {
+    flex: 1 1 48%;
+    max-width: 48%;
+  }
+
+  .product-name {
+    font-size: 11px;
+  }
+}
+
+/* Energy promo section */
+.energy-promo {
+  background: #fff;
+}
+
+.energy-promo-inner {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 24px 0 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.energy-visual {
+  flex: 1 1 560px;
+  display: flex;
+  justify-content: center;
+}
+
+.energy-visual img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  object-fit: contain;
+}
+
+.energy-details {
+  flex: 1 1 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.energy-facts-img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  display: block;
+  margin: 0 0 18px 0;
+}
+
+.energy-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 1fr));
+  gap: 28px 40px;
+}
+
+.energy-facts li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #111;
+}
+
+.fact-number {
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.fact-label {
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.energy-btn {
+  display: inline-block;
+  padding: 12px 22px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.energy-btn:hover {
+  background: white;
+  border: 1px solid black;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .energy-promo-inner {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0 56px;
+  }
+
+  .energy-details {
+    align-items: center;
+  }
+}
+
+/* Rehydration section */
+.rehydration {
+  background: #fff;
+  color: #111;
+}
+
+.rehydration-inner {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 56px 0 128px;
+}
+
+.rehydration-title {
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: .18em;
+  line-height: .9;
+  margin: 0 0 8px 0;
+  font-size: clamp(42px, 12vw, 140px);
+}
+
+.rehydration-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 36px;
+}
+
+.rehydration-card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rehydration-card img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 300px;
+  filter: drop-shadow(0 8px 30px rgba(0, 0, 0, .08));
+}
+
+.rehydration-name {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: #111;
+  margin: 8px 0 10px;
+}
+
+.rehydration-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid #111;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background: #fff;
+}
+
+.rehydration-btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+.Primeice{
+   text-align: center;
+   background-color: white;
+   color: black;
+   font-size: 9rem;
+}
+
+@media (min-width: 900px) {
+
+  /* 3 cards per row on desktop, account for 2 gaps of 36px => 72px total */
+  .rehydration-card {
+    flex: 0 0 calc((100% - 72px)/3);
+    max-width: calc((100% - 72px)/3);
+  }
+}
+
+@media (max-width: 900px) {
+
+  /* 2 per row on tablets */
+  .rehydration-card {
+    flex: 1 1 46%;
+    max-width: 46%;
+  }
+}
+
+@media (max-width: 560px) {
+
+  /* 1 per row on phones */
+  .rehydration-card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Shop tiles (two columns) */
+.shop-tiles {
+  background: #fff;
+}
+
+.shop-tiles-inner {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  padding: 36px 0 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+.tile {
+  flex: 1 1 420px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tile img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  aspect-ratio: 4/3;
+  filter: drop-shadow(0 12px 40px rgba(0, 0, 0, .08));
+}
+
+.tile-btn {
+  margin-top: 16px;
+  display: inline-block;
+  padding: 12px 22px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.tile-btn:hover {
+  background: #111;
+}
+
+@media (max-width: 720px) {
+  .shop-tiles-inner {
+    gap: 28px;
+    padding-bottom: 64px;
+  }
+
+  .tile {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Footer */
+.site-footer {
+  padding: 24px 28px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  text-align: center
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .nav-left {
+    display: none
+  }
+
+  .bottle {
+    right: -140px;
+    top: 120px;
+    width: 92vw
+  }
+
+  .copy {
+    padding: 40px 0 220px
+  }
+
+  .title {
+    font-size: 44px
+  }
+}
+
+@media (max-width: 560px) {
+  .brand {
+    font-size: 22px
+  }
+
+  .nav {
+    grid-template-columns: auto 1fr auto
+  }
+
+  .nav-right {
+    gap: 10px
+  }
+
+  .bottle {
+    opacity: .9
+  }
+}
